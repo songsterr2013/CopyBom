@@ -44,3 +44,15 @@ def load_config():
         return True, config
     else:
         return False, None
+
+
+def running_prerequisite():
+    root_path = ''
+
+    if getattr(sys, 'frozen', False):  # 如果為exe
+        root_path = os.path.dirname(sys.executable)
+    elif __file__:
+        root_path = os.path.dirname(__file__)
+
+    if not os.path.isdir(os.path.join(root_path, "log")):
+        os.mkdir(os.path.join(root_path, "log"))

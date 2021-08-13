@@ -5,6 +5,7 @@ from datetime import date
 from openpyxl import load_workbook
 import util
 
+util.running_prerequisite()
 logger = util.get_logger(__file__)
 
 
