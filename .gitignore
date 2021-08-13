@@ -1,0 +1,8 @@
+dist/
+.env/
+build/
+.idea/
+__pycache__/
+log/
+bom_list.xlsx
+config.json
